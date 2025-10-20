@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif, Arial, Helvetica;
+}
+
+/* Body Styles */
+body {
+    background: #e0e7ff;
+    color: #333366;
+    min-height: 100vh;
+}
+
+/* Navbar Container (Not fixed, flows with the document) */
+.navbar {
+    width: 100%;
+    background-color: #6359d3;
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    /* Fixed positioning styles (position: fixed, top, left, z-index) are removed */
+}
+
+/* Logo Styling */
+.navbar .logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e0e7ff;
+}
+
+/* Navigation Links */
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 25px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+/* Link Hover Effect */
+.navbar nav a:hover {
+    color: #ffc87c;
+}
+
+/* Main Heading (Margin adjusted for normal flow after the navbar) */
+h1 {
+    text-align: center;
+    /* Margin ensures correct spacing after the flowing navbar */
+    margin: 60px auto 40px;
+    font-weight: 600;
+    color: #6359d3;
+    letter-spacing: 1px;
+}
+
+/* Search Form Container */
+form#search-box {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 60px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Search Input Field */
+form input {
+    height: 100%;
+    flex: 1;
+    border: none;
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+    background: transparent;
+}
+
+/* Placeholder Text */
+::placeholder {
+    color: #99a2c3;
+    font-size: 16px;
+}
+
+/* Search Button */
+form button {
+    height: 100%;
+    width: 100px;
+    border: none;
+    background: #6359d3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-right: 0;
+    transition: background 0.3s ease;
+}
+
+/* Search Button Hover */
+form button:hover {
+    background: #5048b0;
+}
+
+/* Image Results Container (Responsive Grid) */
+#search-result {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+/* Image Link Wrapper (for uniform height and cropping) */
+.search-result-link {
+    display: block;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+/* Image Styles */
+#search-result img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Image Hover Effect */
+.search-result-link:hover img {
+    transform: scale(1.05);
+}
+
+/* Load More Button */
+#load-more-btn {
+    display: none;
+    margin: 40px auto;
+    padding: 12px 25px;
+    font-size: 18px;
+    background: #6359d3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Load More Button Hover */
+#load-more-btn:hover {
+    background: #5048b0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
