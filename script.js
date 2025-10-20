@@ -1,4 +1,4 @@
-const accessKey = '$$UNSPLASH_ACCESS_KEY$$'; // 👈 FIX 1: You must put your actual Unsplash API Key here
+const accessKey = '__UNSPLASH_ACCESS_KEY__'; // 👈 FIX 1: You must put your actual Unsplash API Key here
 const searchform = document.getElementById('search-box');
 const searchinput = searchform.querySelector('input');
 const resultdiv = document.getElementById('search-result'); 
